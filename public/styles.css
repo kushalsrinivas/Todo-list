@@ -1,0 +1,103 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Helvetica;
+  background-color: #008c41;
+  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+}
+header {
+  margin: 16px;
+  padding: 13px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: aliceblue;
+}
+.container {
+  height: 75vh;
+  width: 300px;
+  border: solid 1px rgb(255, 255, 255);
+  border-radius: 5px;
+  margin: 0px 30px;
+  overflow: hidden;
+}
+.box {
+  margin: 10vh 35px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-around;
+  justify-content: center;
+}
+.InputArea {
+  height: 20px;
+  margin: 10%;
+  width: 90%;
+  display: flex;
+  flex-flow: wrap;
+  align-items: stretch;
+}
+.InputArea input {
+  margin: 10px;
+  background-color: transparent;
+  border-radius: 3px;
+  border: 2px dotted transparent;
+  border-bottom: solid aliceblue;
+  font-size: 1rem;
+  color: aliceblue;
+  letter-spacing: 0.025rem;
+  padding: 5px;
+}
+.InputBtn {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  color: #ffffff;
+  font-family: Courier New;
+  font-weight: 900;
+  padding: 1rem;
+  background-color: #08a37c;
+  -webkit-box-shadow: 1px 1px 20px 0 #08a37c;
+  -moz-box-shadow: 1px 1px 20px 0 #08a37c;
+  box-shadow: 1px 1px 20px 0 #08a37c;
+  text-shadow: 1px 1px 20px #000000;
+  border: solid #ffffff 0;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+.InputBtn:hover {
+  background: #089599;
+
+  text-decoration: none;
+}
+
+.Items {
+  height: auto;
+  width: 100%;
+
+  font-size: 1rem;
+  color: whitesmoke;
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+}
+.Items li {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+
+.Done {
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+}
+.Done header{
+  display: flex;
+flex-wrap: wrap;
+  flex-direction: row;
+}
