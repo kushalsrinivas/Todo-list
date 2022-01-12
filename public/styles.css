@@ -4,27 +4,53 @@
 }
 
 body {
-  font-family: Helvetica;
-  background-color: #008c41;
+  font-family: "montserrat";
+  background-color: #ececec;
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
 }
-header {
+.header-box {
   margin: 16px;
   padding: 13px;
   text-align: center;
   font-size: 1.5rem;
-  color: aliceblue;
+  color: #6B6B6B;
+
 }
+.header{
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.header-box .header-time{
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.2);
+
+  transition: all 0.4s ease-out;
+}
+.header-box .header-day{
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-shadow: 1px 2px rgba(20, 20, 20, 0.2);
+  padding:1rem;
+  transition: all 0.4s ease-out;
+}
+
+
+
+
 .container {
   height: 75vh;
   width: 300px;
-  border: solid 1px rgb(255, 255, 255);
+  border: solid 1px #000563 ;
   border-radius: 5px;
+
+  background-color:#cfcfcf ;
   margin: 0px 30px;
   overflow: hidden;
 }
 .box {
-  margin: 10vh 35px;
+  margin: -20px 17.5px 0px 17.5px;
   display: flex;
   flex-wrap: wrap;
   align-items: space-around;
@@ -32,7 +58,8 @@ header {
 }
 .InputArea {
   height: 20px;
-  margin: 10%;
+  margin: 10% 10% 20% 10%;
+
   width: 90%;
   display: flex;
   flex-flow: wrap;
@@ -43,24 +70,25 @@ header {
   background-color: transparent;
   border-radius: 3px;
   border: 2px dotted transparent;
-  border-bottom: solid aliceblue;
+  border-bottom: solid #6B6B6B;
   font-size: 1rem;
-  color: aliceblue;
+  color: #4B4B6B;
   letter-spacing: 0.025rem;
   padding: 5px;
+  outline: none;
 }
 .InputBtn {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
-  color: #ffffff;
+  color: #6B6B6B;
   font-family: Courier New;
   font-weight: 900;
   padding: 1rem;
-  background-color: #08a37c;
-  -webkit-box-shadow: 1px 1px 20px 0 #08a37c;
-  -moz-box-shadow: 1px 1px 20px 0 #08a37c;
-  box-shadow: 1px 1px 20px 0 #08a37c;
+  background-color: #EAEAEB;
+  -webkit-box-shadow: 1px 1px 20px 0 #B8B8B8;
+  -moz-box-shadow: 1px 1px 20px 0 #B8B8B8;
+  box-shadow: 1px 1px 20px 0 #B8B8B8;
   text-shadow: 1px 1px 20px #000000;
   border: solid #ffffff 0;
   text-decoration: none;
@@ -70,24 +98,30 @@ header {
 }
 
 .InputBtn:hover {
-  background: #089599;
-
+  background: #F3F1F8;
+  color: #9166FF;
   text-decoration: none;
 }
 
 .Items {
   height: auto;
-  width: 100%;
-
+  width: 70%;
+  margin: 0.5rem auto;
   font-size: 1rem;
-  color: whitesmoke;
-  align-items: center;
+  color:#5477F5;
+  align-items: left;
+  padding: 1rem;
+  border: 1.5px solid #FFFCF5;
+  border-radius: 16px;
+  box-shadow: 2px 2px rgba(50, 50, 70, 0.2);
+  background-color: #ffffff;
   display: flex;
   flex-flow: column;
+  flex-wrap: wrap;
+
 }
 .Items li {
   list-style: none;
-  margin-top: 1rem;
 }
 
 
@@ -100,4 +134,13 @@ flex-direction: column;
   display: flex;
 flex-wrap: wrap;
   flex-direction: row;
+}
+
+
+
+.InputArea header{
+  font-size: 1.35rem;
+  align-items: center;
+  display: flexbox;
+  flex-wrap: wrap;
 }

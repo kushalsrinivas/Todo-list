@@ -5,6 +5,8 @@ import reactDom from "react-dom";
 function InputArea(props) {
     return(
         <>
+        <div className="Input-box">
+
         <div className="InputArea">
          <input 
         placeHolder=""
@@ -15,6 +17,7 @@ function InputArea(props) {
     onClick = {props.addItem}
     >Add</button>   
     </div>
+        </div>
         </>
     )
 }

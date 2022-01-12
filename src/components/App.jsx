@@ -71,6 +71,7 @@ return (
 <div className="box">
 
 <div className= "container">
+
 <InputArea
 Text = {Text}
 HandleChange ={HandleChange}
@@ -88,8 +89,9 @@ addItem ={addItem}
 </ul>
         </div>   
         <div className="container">
-
-            <header>Doing</header>
+        <div className="InputArea cnt-title">
+            <header>In-process</header>
+        </div>
         {
             DoingItem.map((value,index)=>{
                 return(
@@ -104,8 +106,8 @@ deleteDI= {deleteDI}
             })
         }</div> 
         <div class="container Done">
-        <div className="header">
-        <header>Done</header>
+        <div className="InputArea cnt-title">
+        <header>Completed</header>
         <button className="InputBtn" onClick={ClearItems}>clear</button>
         </div>
         {
