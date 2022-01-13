@@ -8,14 +8,18 @@ function InputArea(props) {
         <div className="Input-box">
 
         <div className="InputArea">
+
+
          <input 
-        placeHolder=""
+        placeHolder="+"
         value ={props.Text}
         onChange = {props.HandleChange}
+        onKeyPress={props.addItem}
     />
-    <button className="InputBtn"
+
+    {/* <button className="InputBtn"
     onClick = {props.addItem}
-    >Add</button>   
+    >Add</button>    */}
     </div>
         </div>
         </>

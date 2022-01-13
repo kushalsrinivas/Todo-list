@@ -57,25 +57,29 @@ body {
   justify-content: center;
 }
 .InputArea {
-  height: 20px;
-  margin: 10% 10% 20% 10%;
-
+  height: 20%;
+  margin: 10% 10%;
+  align-items: center;
   width: 90%;
-  display: flex;
-  flex-flow: wrap;
-  align-items: stretch;
+  padding: 1rem;
 }
 .InputArea input {
   margin: 10px;
-  background-color: transparent;
+  background-color: #acacac;
   border-radius: 3px;
-  border: 2px dotted transparent;
-  border-bottom: solid #6B6B6B;
+  border : 2px dashed #6B6B6B;
+  
   font-size: 1rem;
   color: #4B4B6B;
   letter-spacing: 0.025rem;
   padding: 5px;
   outline: none;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+.InputArea input:focus{
+  border: 2px dotted transparent;
+  border-bottom: solid #6B6B6B;
 }
 .InputBtn {
   -webkit-border-radius: 100px;
@@ -118,10 +122,12 @@ body {
   display: flex;
   flex-flow: column;
   flex-wrap: wrap;
+  
 
 }
 .Items li {
   list-style: none;
+  transition: all 0.4s ease-in-out;
 }
 
 
@@ -136,11 +142,31 @@ flex-wrap: wrap;
   flex-direction: row;
 }
 
-
-
-.InputArea header{
-  font-size: 1.35rem;
-  align-items: center;
-  display: flexbox;
-  flex-wrap: wrap;
+.add-animation{
+animation: add-item ease 0.4s  0s 1  normal forwards;
+  
 }
+@keyframes add-item {
+  from{
+    margin-top: -20px;
+  }
+  to{
+    margin-top: 0px;
+  }
+  
+}
+.container-header{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  font-size: 1.35rem;
+flex-wrap: wrap;
+  flex-direction: row;
+  margin: 20px 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+

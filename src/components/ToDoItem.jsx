@@ -4,7 +4,7 @@ function ToDoItem(props)
 {
     return(
 
-        <div className="Items" onClick={
+        <div className="Items add-item" onClick={
             ()=>{
         props.deleteItem(props.id)
             }

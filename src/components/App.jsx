@@ -10,7 +10,7 @@ function App(params) {
     const [Text, SetText] = React.useState("");
     const [Item, SetItem] = React.useState([]);
     const [DoingItem, SetDI] = React.useState([]);
-    const [CompletedItems, SetCI] = React.useState([""]);
+    const [CompletedItems, SetCI] = React.useState([]);
    
 
     function HandleChange(event){
@@ -18,11 +18,17 @@ function App(params) {
         SetText(value);
     }
      
-    function addItem(event) {
-        SetText("");
-        SetItem((prev)=>{
-            return [...prev, Text];
-        })
+    function addItem(event) 
+    {
+        if(event.key === "Enter" && event.target.value.length > 0){
+
+            SetText("");
+    
+            SetItem((prev)=>{
+                return [...prev, Text];
+            })
+        }       
+
     }
       function deleteItem(id) {
         SetItem((prev)=>{
@@ -82,14 +88,14 @@ addItem ={addItem}
         {
             Item.map((value,index)=>{
                 return(
-         <TodoItem value = {value} key={index} id={index} deleteItem={deleteItem}/>
+         <TodoItem value = {value} key={index} id={index} deleteItem={deleteItem} />
                 )
             })
         }
 </ul>
         </div>   
         <div className="container">
-        <div className="InputArea cnt-title">
+        <div className="container-header">
             <header>In-process</header>
         </div>
         {
@@ -106,7 +112,7 @@ deleteDI= {deleteDI}
             })
         }</div> 
         <div class="container Done">
-        <div className="InputArea cnt-title">
+        <div className="container-header">
         <header>Completed</header>
         <button className="InputBtn" onClick={ClearItems}>clear</button>
         </div>
