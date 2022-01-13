@@ -11,7 +11,7 @@ function InputArea(props) {
 
 
          <input 
-        placeHolder="+"
+        placeHolder="to-do"
         value ={props.Text}
         onChange = {props.HandleChange}
         onKeyPress={props.addItem}

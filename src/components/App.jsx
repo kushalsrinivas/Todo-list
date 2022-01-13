@@ -5,6 +5,7 @@ import Header from "./Header";
 import InputArea from "./InputArea";
 import DoingItems from "./DoingItems";
 import CompeletedItem from "./CompletedItem";
+import {DeleteOutlined } from "@ant-design/icons"
 
 function App(params) {
     const [Text, SetText] = React.useState("");
@@ -67,6 +68,14 @@ function App(params) {
             })
         })
     }
+    function DeleteC(id) {
+        SetCI((prev)=>{
+            return prev.filter((value,index)=>{
+              
+                return index !==id
+            })
+        })
+    }
 
 function ClearItems(event) {
     SetCI([]);
@@ -74,58 +83,64 @@ function ClearItems(event) {
 return (
 <>
 <Header></Header>
-<div className="box">
+    <div className="box">
 
-<div className= "container">
+    <div className= "container">
+<div className="container-header">
 
-<InputArea
-Text = {Text}
-HandleChange ={HandleChange}
-addItem ={addItem}
-/>
-<ul>
+    <InputArea
+    Text = {Text}
+    HandleChange ={HandleChange}
+    addItem ={addItem}
+    />
+</div>
+<div className="list-area">
 
-        {
-            Item.map((value,index)=>{
-                return(
-         <TodoItem value = {value} key={index} id={index} deleteItem={deleteItem} />
-                )
-            })
-        }
-</ul>
+    <ul>
+
+            {
+                Item.map((value,index)=>{
+                    return(
+                        <TodoItem value = {value} key={index} id={index} deleteItem={deleteItem} />
+                    )
+                })
+            }
+    </ul>
+</div>
         </div>   
         <div className="container">
-        <div className="container-header">
-            <header>In-process</header>
-        </div>
-        {
-            DoingItem.map((value,index)=>{
-                return(
-<DoingItems 
-key= {index}
-id = {index}
-value={value}
-deleteDI= {deleteDI}
-    
-/>
-                )
-            })
-        }</div> 
-        <div class="container Done">
-        <div className="container-header">
-        <header>Completed</header>
-        <button className="InputBtn" onClick={ClearItems}>clear</button>
-        </div>
-        {
-            CompletedItems.map((value,index)=>{
-                return(
-                    <CompeletedItem key={index} value={value}/>
-                )
-            })
-        }
-        </div> 
+            <div className="container-header">
+                <header>In-process</header>
+            </div>
+            <div>
 
-</div>
+            {
+                DoingItem.map((value,index)=>{
+                    return(
+                            <DoingItems key= {index}id = {index}value={value} deleteDI= {deleteDI}/>
+                    )
+                })
+            }
+            </div> 
+        </div>
+        <div class="container Done">
+            <div className="container-header">
+                <header>Completed</header>
+                <button className="InputBtn" onClick={ClearItems}><DeleteOutlined/> </button>
+            </div>
+                <div className="list-area">
+
+                {
+                    CompletedItems.map((value,index)=>{
+                        return(
+                            <CompeletedItem key={index} value={value} id={index} deleteItem={DeleteC}/>
+                        )
+                    })
+                }
+                </div>
+            </div> 
+
+    </div>
 </>
 )
 }

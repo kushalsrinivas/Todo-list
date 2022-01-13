@@ -2,7 +2,7 @@ import { logDOM } from "@testing-library/react";
 import React from "react";
 
 function Header(props) {
-    const [Time, setTime]= React.useState("");
+    const [Time, setTime]= React.useState("00:00 am");
     const timeBuilder = (t)=>{
         let hour = t.getHours();
         let min = t.getMinutes() < '10' ? `0${t.getMinutes()}`: t.getMinutes();
